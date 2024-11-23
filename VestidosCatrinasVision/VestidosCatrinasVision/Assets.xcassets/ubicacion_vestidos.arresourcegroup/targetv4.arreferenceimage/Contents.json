@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "targetv4.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "width" : 24.573027259684359
+  }
+}

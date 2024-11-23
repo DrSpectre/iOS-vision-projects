@@ -1,0 +1,35 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.0.16.0.3)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def Xform "SpotLight" (
+        customData = {
+            float3 rotationEulerHint = (-1.5707964, 0, 0)
+        }
+    )
+    {
+        quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+        float3 xformOp:translate = (0, 0.5, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "SpotLight"
+        {
+            float3 color = (1, 0.18991333, 0)
+            token info:id = "RealityKit.SpotLight"
+            float intensity = 1000
+
+            def RealityKitStruct "Shadow"
+            {
+            }
+        }
+    }
+}
+

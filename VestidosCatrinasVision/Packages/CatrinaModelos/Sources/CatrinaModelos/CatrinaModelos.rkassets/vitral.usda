@@ -1,0 +1,38 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.0.16.0.3)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    customData = {
+        float3 rotationEulerHint = (-1.5707964, 0, 0)
+    }
+)
+{
+    reorder nameChildren = ["posicion", "particulas_posicion"]
+    quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Xform "posicion" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["Capsule", "Cube"]
+        float3 xformOp:translate = (0, -0.5, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Xform "particulas_posicion" (
+        active = true
+    )
+    {
+        float3 xformOp:translate = (0, 0.25, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+
