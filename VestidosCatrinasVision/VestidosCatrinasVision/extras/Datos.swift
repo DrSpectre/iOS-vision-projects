@@ -27,7 +27,7 @@ public let imagenes_y_vestidos: Array<VestidoVitral> = [
     VestidoVitral(imagen: "Vestido5", modelo: "catrina_vestido_alebrijes"),
     VestidoVitral(imagen: "Vestido6", modelo: "catrina_vestido_6"),
     VestidoVitral(imagen: "Vestido4", modelo: "catrina_vestido_4"),
-    VestidoVitral(imagen: "Vestido7", modelo: "catrina_vestido_7"),
+    // VestidoVitral(imagen: "Vestido7", modelo: "catrina_vestido_7"), /// Este parece no existir en el proyecto
     /// este no carga bien
     VestidoVitral(imagen: "Vestido8", modelo: "catrina_vestido_8"),
 
